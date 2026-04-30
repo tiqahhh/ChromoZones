@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChromoZone - Interactive Learning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🧬 ChromoZone🧬</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="video.html">Videos</a>
+        <a href="mitosis.html"class="active">Mitosis Summary</a>
+        <a href="meiosis.html">Meiosis Summary</a>
+        <a href="comparison.html">Comparison Tables</a>
+        <a href="flashcard.html">Flashcards</a>
+        <a href="exercise.html">Quizzes</a>
+    </nav>
+<main>        
+    <section class="section">
+            <img src="respiratory/mitosis.png" alt="Chromosomal Events Summary" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); margin-bottom: 20px;">
+            </section>
+
+        <section class="section">
+            <h2><strong>PHASE-BY-PHASE BREAKDOWN</strong></h2>
+                <h2><strong>THE MITOSIS PROCESS</strong></h2>
+                <p style="text-align: center; font-size: 1.2em; color: var(--dark-color); margin-bottom: 15px;">📢 Scroll down slowly to observe and discover the different phases of mitosis.</p>
+            </section>
+
+<div class="container">
+
+<!-- LEFT SIDE: Animation -->
+<div class="animation-area">
+<canvas id="canvas"></canvas>
+</div>
+
+  <!-- Scroll Text Sections -->
+  <div class="text-area">
+
+      <div class="stage" data-stage="0">
+          <h2>▶ Prophase </h2>
+          <p>♦️In the nucleus, chromation starts to shorten and thicken to form a chromosome structure that can be seen through a light microscopre.
+
+            <br>♦️The chromosome is seen to be made up of two identical threads called <strong>sister chromatids</strong>.
+
+            <br>♦️Both sister chromatids are joined at the <strong>centromere</strong>.
+
+            <br>♦️The nucleus membrane disintegrates.
+            
+            <br>♦️The centriole moves to the opposite poles and spindle fibres start to form. </p>
+
+          </div>
+
+      <div class="stage" data-stage="1">
+          <h2>▶ Metaphase </h2>
+          <p>♦️Centrioles are at the opposite poles of the cell.
+
+            <br>♦️The spindle fibres maintain the chromosomes at the equatorial plane.
+
+            <br>♦️The chromosomes become alligned in a single row on the equatorial plane.
+
+            <br>♦️Metaphase ends when the centromere begins to divide.</p>
+      </div>
+
+      <div class="stage" data-stage="2">
+          <h2>▶ Anaphase </h2>
+          <p>♦️The centromere divides into two and the sister chromatids separate.
+
+            <br>♦️Spindle fibres shorten, contract and the sister chromatids are attracted to the opposite pole cells.
+
+            <br>♦️Anaphase ends when the chromatid arrives at the pole of the cell.</p>
+      </div>
+
+      <div class="stage" data-stage="3">
+          <h2>▶ Telophase </h2>
+          <p>♦️When the chromatids are at the opposite poles, they are now called the daughter chromosome.
+
+            <br>♦️Each pole contains one set of complete and <strong>identical chromosomes</strong>.
+
+            <br>♦️Chromosome are shaped again as fine chromatin threads.
+
+            <br>♦️Nucleoli are formed again.
+
+            <br>♦️Spindle fibres disappear.
+
+            <br>♦️A new nucleus membrane is formed.
+        
+            <br>♦️The telophase stage is followed by cytokinesis.</p>
+      </div>
+
+  </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+    </main>
+ 
+</body>    
+    <footer>
+        <p>&copy; 2026 ChromoZone | Interactive Learning Platform</p>
+    </footer>
+</html>               

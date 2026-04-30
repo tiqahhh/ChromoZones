@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zooming Meiosis - Interactive Learning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🧬 ChromoZone🧬</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="video.html">Videos</a>
+        <a href="mitosis.html">Mitosis Summary</a>
+        <a href="meiosis.html"class="active">Meiosis Summary</a>
+        <a href="comparison.html">Comparison Tables</a>
+        <a href="flashcard.html">Flashcards</a>
+        <a href="exercise.html">Quizzes</a>
+    </nav>
+<main>        
+    <section class="section">
+            <img src="respiratory/MEIOSIS (2).png" alt="Chromosomal Events Summary" style="max-width: 100%; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); margin-bottom: 20px;">
+            </section>
+
+        <section class="section">
+            <h2><strong>PHASE-BY-PHASE BREAKDOWN</strong></h2>
+                <h2><strong>THE MEIOSIS I PROCESS</strong></h2>
+                <p style="text-align: center; font-size: 1.2em; color: var(--dark-color); margin-bottom: 15px;">📢 Scroll down slowly to observe and discover the different phases of meiosis.</p>
+            </section>
+
+<div class="container">
+
+<!-- LEFT SIDE: Animation -->
+<div class="animation-area">
+<canvas id="meiosis-canvas" class="canvas"></canvas>
+</div>
+
+  <!-- Scroll Text Sections -->
+  <div class="text-area">
+
+      <div class="stage" data-stage="0">
+          <h2>▶ Prophase I</h2>
+          <p>♦️Chromatin shortens and thickens to form visible chromosomes.
+
+            <br>♦️Homologous chromosomes pair up in a process called synapsis.
+
+            <br>♦️Each pair forms a bivalent (tetrad) which contains four chromatids.
+
+            <br>♦️Crossing over occurs, where genetic material is exchanged between non-identical chromatids.(This process produces new gene combinations.)
+
+            <br>♦️The point where crossing over occurs is called chiasma.
+
+            <br>♦️Nuclear membrane and nucleolus begin to disappear.
+
+            <br>♦️Centrioles move to opposite poles of the cell.
+
+            <br>♦️Spindle fibres start to form.</p>
+          </div>
+
+      <div class="stage" data-stage="1">
+          <h2>▶ Metaphase I</h2>
+          <p>♦️Homologous chromosome pairs align at the equatorial plane (middle of the cell).
+
+            <br>♦️One chromosome of each pair attaches to spindle fibres from one pole.
+
+            <br>♦️The homologous chromosome attaches to spindle fibres from the opposite pole.
+
+            <br>♦️Sister chromatids remain joined because the centromere has not separated.</p>
+      </div>
+
+      <div class="stage" data-stage="2">
+          <h2>▶ Anaphase I</h2>
+          <p>♦️Spindle fibres contract and pull homologous chromosomes apart.
+
+            <br>♦️Each homologous chromosome moves to opposite poles of the cell.
+
+            <br>♦️Each chromosome still consists of two sister chromatids joined at the centromere.</p>
+      </div>
+
+      <div class="stage" data-stage="3">
+          <h2>▶ Telophase I</h2>
+          <p>♦️Chromosomes arrive at opposite poles of the cell.
+
+            <br>♦️Each pole contains haploid chromosomes (one set only).
+
+            <br>♦️Spindle fibres disappear.
+
+            <br>♦️Nucleolus reappears and nuclear membrane reforms.
+
+            <br>♦️Cytokinesis occurs, producing two haploid daughter cells.
+
+            <br>♦️The interphase between Meiosis I and II is short and DNA does not replicate again.</p>
+      </div>
+
+  </div>
+
+</div>
+
+            <div class="section" style="margin-top: 20px;">
+                <h2><strong>THE MEIOSIS II PROCESS</strong></h2>
+                </div>
+
+        <div class="container">
+
+
+ <!-- LEFT SIDE: Animation -->
+<div class="animation-area">
+<canvas id="meiosis-canvas-ii" class="animationCanvas"></canvas>
+</div>
+
+  <!-- Scroll Text Sections -->
+  <div class="text-area">
+
+      <div class="stage" data-stage="4">
+          <h2>▶ Prophase II</h2>
+          <p>♦️Nuclear membrane and nucleolus disappear.
+
+            <br>♦️Each chromosome still consists of two sister chromatids joined at the centromere.
+
+            <br>♦️Spindle fibres begin to form in both daughter cells.</p>
+      </div>
+
+      <div class="stage" data-stage="5">
+          <h2>▶ Metaphase II</h2>
+          <p>♦️Chromosomes align randomly at the equatorial plane.
+
+            <br>♦️Each chromatid attaches to spindle fibres at the centromere.
+
+            <br>♦️The stage ends when the centromeres separate.</p>
+      </div>
+
+      <div class="stage" data-stage="6">
+          <h2>▶ Anaphase II</h2>
+          <p>♦️Centromeres split.
+
+            <br>♦️Sister chromatids separate and move to opposite poles.
+
+            <br>♦️Each separated chromatid is now called a chromosome.</p>
+      </div>
+
+      <div class="stage" data-stage="7">
+          <h2>▶ Telophase II</h2>
+          <p>♦️Chromosomes arrive at the poles of the cell.
+
+            <br>♦️Spindle fibres disappear.
+
+            <br>♦️Nuclear membranes and nucleoli reform.
+
+            <br>♦️Cytokinesis occurs, producing four haploid daughter cells.
+
+            <br>♦️Each haploid cell:
+
+            <br>↪ Has half the number of chromosomes of the parent cell.
+
+            <br>↪ Has different genetic information.
+
+            <br>↪ Develops into gametes (sex cells).</p>
+      </div>
+
+  </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+    </main>
+ 
+</body>    
+    <footer>
+        <p>&copy; 2026 ChromoZone | Interactive Learning Platform</p>
+    </footer>
+</html>               

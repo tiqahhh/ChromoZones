@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChromoZone - Interactive Learning</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🧬 ChromoZone🧬</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="video.html">Videos</a>
+        <a href="mitosis.html">Mitosis Summary</a>
+        <a href="meiosis.html">Meiosis Summary</a>
+        <a href="comparison.html">Comparison Tables</a>
+        <a href="flashcard.html">Flashcards</a>
+        <a href="exercise.html"class="active">Quizzes</a>
+    </nav>
+
+    <main>
+        <!-- QUIZ SECTION -->
+        <section class="section">
+            <h2> <strong>LET'S CHALLENGE YOUR KNOWLEDGES</h2>
+
+            <p style="text-align: center; margin-bottom: 30px;">Choose your difficulty level and answer 10 questions to test your understanding of mitosis and meiosis!</p>
+            
+            <!-- Category Selection -->
+            <div class="category-selector" id="category-selector" style="margin: 20px 0; text-align: center;">
+                <h3>Select Difficulty Level:</h3>
+                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                    <button class="btn btn-category easy-btn" onclick="selectCategory('easy')">Easy</button>
+                    <button class="btn btn-category medium-btn" onclick="selectCategory('medium')">Medium</button>
+                    <button class="btn btn-category hard-btn" onclick="selectCategory('hard')">Hard</button>
+                </div>
+            </div>
+
+            <div id="quiz-section" style="display: none;">
+                <div class="quiz-wrapper" style="display: flex; gap: 20px; align-items: flex-start;">
+                    <!-- progress sidebar -->
+                    <aside class="quiz-progress-sidebar" style="width: 220px;">
+                        <div class="quiz-progress">
+                            <h4>Quiz Progress</h4>
+                            <p>Level: <span id="level-name">Easy</span> | Questions Answered: <span id="attempted">0</span> / 10</p>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <!-- question area -->
+                    <div class="quiz-content" style="flex: 1;">
+                        <form id="quiz-form" class="quiz-container">
+                <!-- EASY QUESTIONS (1-10) -->
+                <!-- Question E1 -->
+                <div class="question" data-difficulty="easy">
+                    <span class="question-number">1</span>
+                    <h4>Which process results in the production of two genetically identical daughter cells?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q1" value="a"> Binary fission
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q1" value="b"> Fertilization
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q1" value="c"> Meiosis
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q1" value="d"> Mitosis
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question E2 -->
+                <div class="question" data-difficulty="easy">
+                    <span class="question-number">2</span>
+                    <h4>In which type of cell does meiosis typically occur?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q2" value="a"> Bacteria
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q2" value="b"> Somatic cells
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q2" value="c"> Germ cells
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q2" value="d"> Nerve cells
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question E3 -->
+                <div class="question" data-difficulty="easy">
+                    <span class="question-number">3</span>
+                    <h4>How many daughter cells are produced at the end of meiosis?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q3" value="a"> 4
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q3" value="b"> 2
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q3" value="c"> 8
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q3" value="d"> 1
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question E4 -->
+                <div class="question" data-difficulty="easy">
+                    <span class="question-number">4</span>
+                    <h4>During which phase of mitosis do chromosomes line up in the middle of the cell?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q4" value="a"> Anaphase
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q4" value="b"> Metaphase
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q4" value="c"> Telophase
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q4" value="d"> Prophase
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question E5 -->
+                <div class="question" data-difficulty="easy">
+                    <span class="question-number">5</span>
+                    <h4>What is the primary purpose of mitosis in multicellular organisms?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q5" value="a"> Sexual reproduction
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q5" value="b"> Increasing genetic diversity
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q5" value="c"> Reducing chromosome number
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q5" value="d"> Growth and tissue repair
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question E6 -->
+                <div class="question" data-difficulty="easy">
+                    <span class="question-number">6</span>
+                    <h4>In meiosis, the 'crossing over' of genetic material occurs during which phase?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q6" value="a"> Prophase II
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q6" value="b"> Metaphase II
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q6" value="c"> Anaphase I
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q6" value="d"> Prophase I
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question E7 -->
+                <div class="question" data-difficulty="easy">
+                    <span class="question-number">7</span>
+                    <h4>If a parent cell has 46 chromosomes, how many chromosomes will each daughter cell have after mitosis?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q7" value="a"> 92
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q7" value="b"> 0
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q7" value="c"> 46
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q7" value="d"> 23
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question E8 -->
+                <div class="question" data-difficulty="easy">
+                    <span class="question-number">8</span>
+                    <h4>Which term describes a cell that contains only one set of chromosomes?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q8" value="a"> Tetraploid
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q8" value="b"> Diploid
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q8" value="c"> Zygote
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q8" value="d"> Haploid
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question E9 -->
+                <div class="question" data-difficulty="easy">
+                    <span class="question-number">9</span>
+                    <h4>What is the name of the process where the cytoplasm actually divides to form two separate cells?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q9" value="a"> Cytokinesis
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q9" value="b"> Mitosis
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q9" value="c"> Interphase
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q9" value="d"> Meiosis
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question E10 -->
+                <div class="question" data-difficulty="easy">
+                    <span class="question-number">10</span>
+                    <h4>Which of the following is a key difference between Mitosis and Meiosis?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q10" value="a"> Meiosis is faster than mitosis.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q10" value="b"> Meiosis produces genetically unique cells while mitosis produces identical cells.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q10" value="c"> Mitosis has two division while meiosis has one.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q10" value="d"> Mitosis only happens in plants while meiosis only happens animals.
+                        </label>
+                    </div>
+                </div>
+
+                <!-- MEDIUM QUESTIONS (11-20) -->
+                <!-- Question M1 -->
+                <div class="question" data-difficulty="medium">
+                    <span class="question-number">1</span>
+                    <h4>Which of the following occurs in Meiosis I but NOT in Mitosis?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q11" value="a"> Formation of mitotic spindle
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q11" value="b"> Separation of sister chromatids
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q11" value="c"> Condensation of chromosomes
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q11" value="d"> Pairing of homologous chromosomes
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question M2 -->
+                <div class="question" data-difficulty="medium">
+                    <span class="question-number">2</span>
+                    <h4>If a cell with a diploid number of 24 (2n = 24) undergoes meiosis, how many chromosomes will be present in each daughter cell after Telophase II?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q12" value="a"> 12
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q12" value="b"> 48
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q12" value="c"> 6
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q12" value="d"> 24
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question M3 -->
+                <div class="question" data-difficulty="medium">
+                    <span class="question-number">3</span>
+                    <h4>During which specific phase of meiosis does 'independent assortment' occur?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q13" value="a"> Metaphase I
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q13" value="b"> Prophase I
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q13" value="c"> Metaphase II
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q13" value="d"> Anaphase II
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question M4 -->
+                <div class="question" data-difficulty="medium">
+                    <span class="question-number">4</span>
+                    <h4>What is the result of the separation of homologous chromosomes during Anaphase I?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q14" value="a"> Polyploidy
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q14" value="b"> Genetically identical daughter cells
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q14" value="c"> Reduction from diploid to haploid
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q14" value="d"> The formation of tetrads
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question M5 -->
+                <div class="question" data-difficulty="medium">
+                    <span class="question-number">5</span>
+                    <h4>In a human skin cell, how many chromatids are present during Metaphase of mitosis?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q15" value="a"> 46
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q15" value="b"> 184
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q15" value="c"> 92
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q15" value="d"> 23
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question M6 -->
+                <div class="question" data-difficulty="medium">
+                    <span class="question-number">6</span>
+                    <h4>Which structure joins two sister chromatids together?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q16" value="a"> Nucleus
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q16" value="b"> Centromere
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q16" value="c"> Ribosome
+                            </label>
+                        <label class="option">
+                            <input type="radio" name="q16" value="d"> Nucleus membrane
+                            </label>
+                    </div>
+                </div>
+
+                <!-- Question M7 -->
+                <div class="question" data-difficulty="medium">
+                    <span class="question-number">7</span>
+                    <h4>What is the significance of the 'chiasma' formed during Prophase I of meiosis?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q17" value="a"> They mark the sites where crossing over occur.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q17" value="b"> They are the enzymes that replicate DNA.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q17" value="c"> They are the organelles that divide the cytoplasm.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q17" value="d"> They represent the points where spindle fibers attach.
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question M8 -->
+                <div class="question" data-difficulty="medium">
+                    <span class="question-number">8</span>
+                    <h4>Which of these best describes the state of the chromosomes at the beginning of Meiosis II?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q18" value="a"> Each chromosome consists of single chromatid..
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q18" value="b"> Homologous pairs are still joined.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q18" value="c"> Each chromosome consists of two sister chromatids.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q18" value="d"> The DNA has just been replicated.
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question M9 -->
+                <div class="question" data-difficulty="medium">
+                    <span class="question-number">9</span>
+                    <h4>In plant cells, how does cytokinesis differ from animal cells?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q19" value="a"> Plant cells use cleavage furrow.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q19" value="b"> Plant cells form a cell plate.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q19" value="c"> Plant cells divide by binary fission.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q19" value="d"> Plant cells do not undergo cytokinesis.
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question M10 -->
+                <div class="question" data-difficulty="medium">
+                    <span class="question-number">10</span>
+                    <h4>What do we call the failure of chromosomes to separate during meiosis?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q20" value="a"> Replication
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q20" value="b"> Crossing over
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q20" value="c"> Nondisjunction
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q20" value="d"> Synapsis
+                        </label>
+                    </div>
+                </div>
+
+                <!-- HARD QUESTIONS (21-30) -->
+                <!-- Question H1 -->
+                <div class="question" data-difficulty="hard">
+                    <span class="question-number">1</span>
+                    <h4>A scientist observes a cell where the homologous chromosomes have failed to separate during Anaphase I. What is the most likely result for the four gametes produced?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q21" value="a"> The gametes will be normal because Meiosis II will fix the error.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q21" value="b"> The cell will realize the mistake and restart the process.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q21" value="c"> Only two gametes will be abnormal while the other two will be normal.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q21" value="d"> All four gametes will have abnormal number of chromosomes.
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question H2 -->
+                <div class="question" data-difficulty="hard">
+                    <span class="question-number">2</span>
+                    <h4>Identical twins come from one zygote splitting in two. Why are siblings who are NOT identical twins always genetically different, even though they have the same parents?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q22" value="a"> Because the father's DNA changes every year.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q22" value="b"> Because of crossing over and independent assortment during meiosis.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q22" value="c"> Because they eat different foods which changes their DNA.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q22" value="d"> Because Mitosis creates new genes.
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question H3 -->
+                <div class="question" data-difficulty="hard">
+                    <span class="question-number">3</span>
+                    <h4>A certain medication prevents spindle fibers from shortening. If this drug is applied during Metaphase II, what will happen to the chromosomes?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q23" value="a"> The cell will immediately turn into a skin cell.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q23" value="b"> Sister chromatids will stay together and fail to separate.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q23" value="c"> The chromosomes will double in size.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q23" value="d"> The chromosome will disappear.
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question H4 -->
+                <div class="question" data-difficulty="hard">
+                    <span class="question-number">4</span>
+                    <h4>If meiosis produced diploid (2n) gametes instead of haploid (n) ones, what would happen to the chromosome number of the offspring in the next generation?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q24" value="a"> It would double to 4n.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q24" value="b"> The chromosome will turn into RNA.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q24" value="c"> It would be halved to n/2.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q24" value="d"> It would remain the same at 2n.
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question H5 -->
+                <div class="question" data-difficulty="hard">
+                    <span class="question-number">5</span>
+                    <h4>In a lab, a student sees a cell with chromosomes lined up 'single-file' in the middle. The cell is haploid (n) condition. Which stage is she most likely looking at?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q25" value="a"> Metaphase II
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q25" value="b"> Metaphase I
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q25" value="c"> Anaphase II
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q25" value="d"> Prophase I
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question H6 -->
+                <div class="question" data-difficulty="hard">
+                    <span class="question-number">6</span>
+                    <h4>Why is 'Crossing Over' during Prophase I so important for the survival of a species?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q26" value="a"> It prevents the cell from ever getting sick.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q26" value="b"> It turn off the bad genes automatically.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q26" value="c"> It makes the process faster.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q26" value="d"> It increase genetic variety which can help populations adapt to changing environments and survive over time.
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question H7 -->
+                <div class="question" data-difficulty="hard">
+                    <span class="question-number">7</span>
+                    <h4>Cancer is caused by uncontrolled cell division. Most cancers involve errors in Mitosis. Why is Meiosis rarely a cause of cancer?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q27" value="a"> Meiosis cells do not have DNA.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q27" value="b"> Chromosomes are stronger in Meiosis.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q27" value="c"> Meiosis is too fast for cancer to start.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q27" value="d"> Meiosis only happens in specific reproductive organs and not the whole body.
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question H8 -->
+                <div class="question" data-difficulty="hard">
+                    <span class="question-number">8</span>
+                    <h4>A mule is a hybrid animal with 63 chromosomes. It cannot produce sperm or eggs. Using your knowledge of Meiosis I, what is the most logical reason for this?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q28" value="a"> The chromosomes are too large to fit in the spindle fibers.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q28" value="b"> The mule is too tired to go through meiosis.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q28" value="c"> The odd number of chromosomes prevents proper pairing and segregation during meiosis.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q28" value="d"> Mule do not have nuclei in their cells.
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question H9 -->
+                <div class="question" data-difficulty="hard">
+                    <span class="question-number">9</span>
+                    <h4>During Oogenesis (eggs production), the cell divides unevenly, creating one big egg and three tiny 'polar bodies.' What is the advantage of this?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q29" value="a"> It saves all the nutrients and cytoplasm for one strong egg.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q29" value="b"> It makes it easier for sperm to find the egg.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q29" value="c"> The tiny cells eventually turn into twins.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q29" value="d"> The tiny cells are used to fight bacteria.
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Question H10 -->
+                <div class="question" data-difficulty="hard">
+                    <span class="question-number">10</span>
+                    <h4>What would happen if Meiosis II did not occur after Meiosis I?</h4>
+                    <div class="options">
+                        <label class="option">
+                            <input type="radio" name="q30" value="a"> The gametes would have double the amount of DNA needed.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q30" value="b"> The gametes would have no DNA at all.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q30" value="c"> The gametes would be normal.
+                        </label>
+                        <label class="option">
+                            <input type="radio" name="q30" value="d"> The cell would turn into two identical clones.
+                        </label>
+                    </div>
+                </div>
+
+                <button type="button" class="btn btn-primary" onclick="submitQuiz()" style="width: 100%; margin-top: 20px;">Submit Quiz</button>
+            </form>
+
+            <div id="results" style="display: none;">
+                <!-- Results will appear here -->
+            </div>
+            </div> <!-- end quiz-content -->
+        </div> <!-- end quiz-wrapper -->
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 ChromoZone | Interactive Learning Platform</p>
+    </footer>
+    <!-- include main script -->
+    <script src="script.js"></script>
+</body>
+</html>
